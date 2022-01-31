@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+    <h1>Here is the list of Employee Forms</h1>
+        <nav>
+            <a href="index.html">Form</a>
+            <a href="#">View the forms</a>
+        </nav>
+       <script>
+          fetch('/getData').then((employeedatas)=>{
+                employeedatas.json().then((theEmployeeDatas)=>{
+                    for(let employeedata of theEmployeeDatas.employeedata){
+                        let element = document.createElement('p')
+                        element.innerHTML = employeedata.employeedata
+                        document.getElementById('container').append(element)
+                        // Add Delete Button
+                        let deleteButton = document.createElement('button')
+                        deleteButton.innerText = 'Delete Entry'
+                        deleteButton.addEventListener('click', function deleteRecord(){
+                            location.reload()
+                            fetch('/deleteRecord',{
+                                method:'POST',
+                                headers:{
+                                    'Content-type':'application/json'
+                                },
+                                body:JSON.stringify({
+                                    _id:employeedata._id
+                                })
+                            })
+                        })
+                        element.appendChild(deleteButton)
+                    }
+                })
+          })
+       </script>
+    </div>
+    
+</body>
+</html>

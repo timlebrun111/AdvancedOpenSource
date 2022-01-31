@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Collection</title>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>Please fill out the form.</h1>
+        <nav>
+            <a href="#">Form</a>
+            <a href="view.html">View the forms</a>
+        </nav>
+        <form action="/saveEmployeeEntry" method="post">
+            <span id="err" style="color:red;"></span>
+            <br>
+            <label for="firstName">Enter your first name here.</label>
+            <br>
+            <input type="text" name="firstName" id="firstNameEntry">
+            <br>
+            <button type="submit">Submit the form</button>
+        </form>
+
+    </div>
+    
+</body>
+</html>
