@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Employee Collection</title>
+    <title>Update Employee</title>
 </head>
 <body>
     
     <div id="container">
-        <h1>Please fill out the form.</h1>
+        <h1>Update Employee Data</h1>
         <ul>
             <li><a href="#">Form</a></li>
             <li><a href="view.html">View the forms</a></li>
         </ul>           
        
         <form action="/saveEmployeeEntry" method="post">
+           
         
             <span id="err" style="color:red;"></span>
             <br>
             <label for="firstName">Enter your first name here.</label>
             <br>
-            <input type="text" name="firstName" id="firstNameEntry">
+            <input type="text" name="firstName" id="firstNameEntry" value="employeedata.firstName">
             <br>
             <label for="lastName">Enter your last name here.</label>
             <br>
-            <input type="text" name="lastName" id="lastNameEntry">
+            <input type="text" name="lastName" id="lastNameEntry" value="employeedata.lastName">
             <br>
             <label for="department">Please pick a department.</label>
             <br>
@@ -38,15 +39,15 @@
             <br>
             <label for="startDate">Please enter your start date.</label>
             <br>
-            <input type="date" name="startDate" id="startDateEntry">
+            <input type="date" name="startDate" id="startDateEntry" value="employeedata.startDate">
             <br>
             <label for="jobTitle">Please enter your Job Title.</label>
             <br>
-            <input type="text" name="jobTitle" id="jobTitleEntry">
+            <input type="text" name="jobTitle" id="jobTitleEntry" value="employeedata.jobTitle">
             <br>
             <label for="salary">Please enter your salary.</label>
             <br>
-            <input type="number" name="salary" id="salaryEntry">
+            <input type="number" name="salary" id="salaryEntry" value="employeedata.salary">
             <br>
             <button class="submitButton" type="submit">Submit the form</button>
         </form>
