@@ -41,6 +41,12 @@ app.get('/getData',(req,res)=>{
 
 //Deletes the Data
 
+app.post('/deleteRecord',(req,res)=>{
+    console.log("Record Deleted" + req.body._id + " " + req.body.employeedata)
+    EmployeeData.findByIdAndDelete(req.body._id).exec()
+    res.redirect("view.html")
+})
+
 
 
 
