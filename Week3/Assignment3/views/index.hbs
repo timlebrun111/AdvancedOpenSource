@@ -1,0 +1,44 @@
+
+<body>
+    
+    <div id="container">
+        <h1>Please fill out the form.</h1>
+     
+        <form action="/saveEmployeeEntry" method="post">
+        
+            <span id="err" style="color:red;"></span>
+            <br>
+            <label for="firstName">Enter your first name here.</label>
+            <br>
+            <input type="text" name="firstName" id="firstNameEntry">
+            <br>
+            <label for="lastName">Enter your last name here.</label>
+            <br>
+            <input type="text" name="lastName" id="lastNameEntry">
+            <br>
+            <label for="department">Please pick a department.</label>
+            <br>
+            <select name="department" id="departmentEntry">
+                <option value="IT">IT</option>
+                <option value="Accounting">Accounting</option>
+                <option value="HR">HR</option>
+            </select>
+            <br>
+            <label for="startDate">Please enter your start date.</label>
+            <br>
+            <input type="date" name="startDate" id="startDateEntry">
+            <br>
+            <label for="jobTitle">Please enter your Job Title.</label>
+            <br>
+            <input type="text" name="jobTitle" id="jobTitleEntry">
+            <br>
+            <label for="salary">Please enter your salary.</label>
+            <br>
+            <input type="number" name="salary" id="salaryEntry">
+            <br>
+            <button class="submitButton" type="submit">Submit the form</button>
+        </form>
+
+    </div>
+    
+</body>
