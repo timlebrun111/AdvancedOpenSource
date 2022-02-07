@@ -1,0 +1,27 @@
+<div>
+    <h1>Color Grid</h1>
+
+    <form action="/" method="post">
+     <div class="colorForm">
+         <label>Choose a Grid Size</label>
+         <select name="grid">
+             {{#selectHelper grid}}
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>        
+                    <option value="20">20</option>
+             {{/selectHelper}}    
+         </select>
+
+         <button type="submit">Submit</button>
+     </div>
+     <div>
+         
+     </div>
+    </form>
+
+    <div class="colorGrid">
+        {{{grid grid grid}}}
+    </div>
+</div>
