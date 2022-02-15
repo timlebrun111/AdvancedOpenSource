@@ -1,0 +1,49 @@
+
+<body>
+    <div id="container">
+       <script>
+          fetch('/getData').then((employeedatas)=>{
+                employeedatas.json().then((theEmployeeDatas)=>{
+                    for(let employeedata of theEmployeeDatas.employeedata){
+                        let element = document.createElement('div')
+                        element.innerHTML = "<p> First name:" + employeedata.firstName + "</p>" + "<p> Last name: " + employeedata.lastName + "</p>" + "</p>" + "<p> Department: " + employeedata.department + "</p>" + "<p> Start Date: " + employeedata.startDate + "</p>" + "<p> Job Title: " + employeedata.jobTitle + "</p>" + "<p> Salary: $" + employeedata.salary + "</p>"
+                        document.getElementById('container').append(element)
+                        
+                        // Add Delete Button
+                        let deleteButton = document.createElement('button')
+                        deleteButton.innerText = 'Delete Entry'
+                        deleteButton.addEventListener('click', function deleteRecord(){
+                            location.reload()
+                            fetch('/deleteRecord',{
+                                method:'POST',
+                                headers:{
+                                    'Content-type':'application/json'
+                                },
+                                body:JSON.stringify({
+                                    _id:employeedata._id
+                                })
+                            })
+                        })
+                        element.appendChild(deleteButton);
+
+                        let updateButton = document.createElement('button')
+                        updateButton.innerText = 'Update Entry'
+                        updateButton.addEventListener('click', function updateRecord(){
+                            location.reload(),                        
+                            window.location.href="update/" + employeedata._id
+                            
+                            
+                        })
+                        element.appendChild(updateButton)
+                        
+                        
+
+                        
+                    }
+                })
+          })
+       </script>
+    </div>
+    
+</body>
+</html>

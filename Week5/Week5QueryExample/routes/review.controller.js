@@ -30,7 +30,7 @@ module.exports.reviewReadOne = (req,res)=>{
         })
     }else{
         sendJSONresponse(res, 404,{
-            "message":"reviewi not found"
+            "message":"review not found"
         })
     }   
 }
