@@ -1,0 +1,60 @@
+
+<body>
+    <div id="container">
+        
+        <form action="/saveContactEntry" method="post" name="myForm" onsubmit="return validateForm()">                   
+            <fieldset>
+                <h1>{{title}}</h1>
+
+                <span id="err" style="color:red;"></span>
+                <br>
+                <label for="name">Enter your full name.</label>
+                <br>
+                <input type="text" name="name" id="nameEntry">
+                <br>
+                <label for="phoneNumber">Enter your phone number here.</label>
+                <br>
+                <input type="text" name="phoneNumber" id="phoneNumberEntry">
+                <br>
+                <label for="phoneType">Please select a phone type.</label>
+                <br>
+                <select name="phoneType" id="phoneTypeEntry">
+                    <option value="Mobile">Mobile</option>
+                    <option value="Work">Work</option>
+                    <option value="Home">Home</option>
+                </select>
+                <br>
+                <br>      
+                            
+                <button class="submitButton" type="submit">Submit the form</button>
+
+            </fieldset>
+            
+        </form>
+        
+
+    </div>
+
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["name"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            let i = document.forms["myForm"]["phoneNumber"].value;
+            if (i == ""){
+                alert("Phone Number must be filled out");
+                return false;
+            }
+
+            let p = document.forms["myForm"]["phoneType"].value;
+            if(p == ""){
+                alert("Phone Type must be filled out")
+                return false;
+            }
+        }
+    </script>
+    
+</body>

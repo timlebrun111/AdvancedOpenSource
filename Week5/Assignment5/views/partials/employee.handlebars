@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <div>
+            <div>
+                <p><strong>Name: </strong>{{firstName}} {{lastName}}</p>
+                <p><strong>Start Date:</strong> {{startDate}}</p>
+                <p><strong>Job Title:</strong> {{jobTitle}}</p>
+                <p><strong>Department:</strong> {{department}}</p>
+                <p><strong>Salary: $</strong> {{salary}}</p>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <form action="/delete/{{_id}}" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+        </footer>
+    </div>
+</div>

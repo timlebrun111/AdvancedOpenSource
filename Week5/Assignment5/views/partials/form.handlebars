@@ -1,0 +1,58 @@
+<div id="formCreation">
+    <form action="{{action}}" method="post">
+        <div>
+            <label for="firstName">First Name</label>
+            <div>
+                <input type="text" name="firstName" value="{{firstName}}"/>
+            </div>
+        </div>
+
+        <div>
+            <label for="lastName">Last Name</label>
+            <div>
+                <input type="text" name="lastName" value="{{lastName}}"/>
+            </div>
+        </div>
+
+        <div>
+            <label>Department</label>
+            <div>
+                <select name="department">
+                    {{#select department}}
+                        <option value="Software Development">Software Development</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Accounting">Accounting</option>                        
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <label>Start Date</label>
+            <div>
+                <input type="date" value="{{startDate}}" name="startDate"/>
+            </div>
+        </div>
+
+        <div>
+            <label>Job Title</label>
+            <div>
+                <input type="text"  value="{{jobTitle}}"  name="jobTitle"/>
+            </div>
+        </div>
+
+        <div>
+            <label >Salary</label>
+            <div>
+                <input type="number" value="{{salary}}" name="salary"/>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <button id="submitButton">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+

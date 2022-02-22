@@ -1,0 +1,21 @@
+
+<body>
+    <div id="container">
+       <script>
+          fetch('/getData').then((contacts)=>{
+                contacts.json().then((theContactsDatas)=>{
+                    for(let contact of theContactsDatas.contact){
+                        let element = document.createElement('div')
+                        element.innerHTML = "<div id='jsonContainer'><p> Name: " + contact.name + "</p>" + "<p> Phone Number: " + contact.phoneNumber + "</p>" + "</p>" + "<p> Phone Type: " + contact.phoneType + "</p></div>"
+                        document.getElementById('container').append(element)      
+
+                        
+                                           
+                    }
+                })
+          })
+       </script>
+    </div>
+    
+</body>
+</html>

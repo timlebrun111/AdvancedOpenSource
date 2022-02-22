@@ -1,21 +1,22 @@
 {
-  "name": "assignment3",
+  "name": "assignment5",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-  },
-  "author": "",
-  "license": "ISC",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.1",
+    "debug": "^4.3.3",
+    "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
-    "jquery": "^3.6.0",
-    "jsdom": "^19.0.0",
-    "moment": "^2.29.1",
-    "mongoose": "^6.1.8"
-  }
+    "handlebars": "^4.7.7",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.1",
+    "pug": "^3.0.2"
+  },
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Timothy LeBrun",
+  "license": "ISC"
 }

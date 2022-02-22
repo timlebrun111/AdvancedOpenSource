@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment #5 - Timothy LeBrun</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+
+        });
+    </script>
+
+    
+    <style>
+
+    input[type=text] {
+        width: 75%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: #f1f1f1;
+        border-color: black;
+    }
+
+    input[type=date] {
+        width: 75%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: #f1f1f1;
+        border-color: black;
+    }
+
+    select{
+        margin-left:10px;
+        margin-top:10px;
+    }
+
+    
+
+    button {
+        background-color: #f31414;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    #submitButton {
+        background-color: #f31414;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+       
+    }
+
+
+
+    input[type=number] {
+        width: 75%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: #f1f1f1;
+        border-color: black;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+  
+    li {
+        float: left;
+    }
+  
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+  
+  
+    li a:hover {
+        background-color: #bb8b8b;
+    }
+
+    #jsonContainer{
+        padding:2px;
+        border:1px solid black;
+        background-color: #c9c9d1;
+        vertical-align:middle;
+        color:835600;   
+        text-align:center;
+        width: 300px; 
+        margin-top:10px;
+        margin-left: 10px;
+    }
+
+    #formCreation{
+        
+        border:1px solid black;
+        background-color: #c9c9d1;      
+        color:835600;   
+        width:450px;
+        margin-top:10px;
+        margin-left: 10px;
+    }
+
+    #div{
+        
+        border:1px solid black;
+        background-color: #c9c9d1;      
+        color:835600;   
+        
+        
+    }
+    </style>
+</head>
+
+<body>
+    <ul>
+            <li><a href="/">Create Employee</a></li>
+            <li><a href="/view">Employee List</a></li>
+            <li><a href="/query">Query Employees</a></li>
+        </ul>
+
+    {{{body}}}
+</body>
+
+</html>
